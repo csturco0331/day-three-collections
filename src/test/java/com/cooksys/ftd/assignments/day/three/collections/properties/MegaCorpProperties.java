@@ -239,6 +239,7 @@ public class MegaCorpProperties {
         corp.add(slave.getParent());
         hierarchy = corp.getHierarchy();
         children = hierarchy.get(slave.getParent());
+
         children.add(slave);
         assertFalse("#getHierarchy() returned a live map that allowed external changes to the MegaCorp", corp.has(slave));
 
